@@ -1,0 +1,26 @@
+<script setup>
+
+</script>
+
+<template>
+  <div class="container">
+    <div class="homepage">
+      <router-link to="/">Home</router-link>
+      <router-link to="/todos">Todos</router-link>
+    </div>
+    <router-view></router-view>
+  </div>
+</template>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.homepage {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+</style>
