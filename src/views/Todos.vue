@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="container-inner">
+    <form class="container-inner">
       <input class="todo" @keydown.enter="add" placeholder= 'Enter task and add with "Enter" or "+"' v-model="todo" type="text">
       <img @click="add" src="../assets/add.svg" alt="add">
-    </div>
+    </form>
     <ol>
       <todo-item v-for="todo in todos" v-bind:key="todo.item" v-bind:todo="todo"></todo-item>
     </ol>

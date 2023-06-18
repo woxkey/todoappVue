@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="homepage">
-      <router-link to="/">Home</router-link>
-      <router-link to="/todos">Todos</router-link>
+      <router-link class="link" to="/">Home</router-link>
+      <router-link class="link" to="/todos">Todos</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -22,5 +22,13 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.link:hover {
+  color: gray;
 }
 </style>
