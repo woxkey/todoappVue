@@ -19,6 +19,10 @@ export const store = new Vuex.Store({
     deleteTodo (state, payload) {
       const i = state.todos.map(item => item.id).indexOf(payload)
       state.todos.splice(i, 1)
+    },
+    editTodo (state, payload) {
+      const index = state.todos.findIndex((objIndex) => objIndex.id === payload.id)
+      state.todos[index].todo = payload.todo
     }
   },
   plugins: [vuexLocal.plugin]
